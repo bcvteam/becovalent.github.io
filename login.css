@@ -37,6 +37,21 @@ body {
   transition: all 0.2s;
 }
 
+.bg-bcv {
+    background-color: #309b90;
+}
+
+.col-bcv {
+    color: #309b90;
+    border-color: #309b90;
+
+}
+
+.col-bcv:hover {
+    background-color: #309b90;
+    border-color: #309b90;
+}
+
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
