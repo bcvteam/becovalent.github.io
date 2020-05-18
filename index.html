@@ -1,270 +1,128 @@
 <html><head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Bootstrap 4 Header with HTML5 Video Background</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>BeCoValent</title>
+
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+  <link href="style.css" rel="stylesheet">
+  <script src="video_logic.js"></script>
 
+</head><body>
 
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-      <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
-
-  <style id="compiled-css" type="text/css">
-
-header {
-  position: relative;
-  background-color: black;
-  height: calc(100vh - 56px);
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-#canvas {
-  width: 100%;
-  height: 100px;
-}
-
-.bg-bcv {
-    background-color: #309b90;
-}
-
-.font-bcv {
-    font-family: 'Comfortaa', cursive;
-}
-
-  </style>
-
-
-
-
-  <script>
-
-    $(function() {
-    $('#unmute').change(function() {
-
-      $("video").prop('muted', !$(this).prop('checked') );
-    })
-  })
-
-    $(function () {
-      $( "#unmute" ).click(function() {
-
-
-
-
-      });
-    });
-  </script>
-</head>
-<body>
-
-
-
-<header>
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="video">
-    <source src="BeCoValent_promo.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-75 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3" style="font-family: 'Comfortaa', cursive; opacity: 0.7;">BeCoValent</h1>
-        <!--p class="lead mb-0">Bond - Collaborate - View</p  color: #309b90;  -->
-        <p class="lead mb-0" style="font-family: 'Comfortaa', cursive; opacity: 0.7;">Find - Bond - Team UP</p>
-      </div>
-    </div>
-
-    <div class="d-flex h-25 text-center align-items-end justify-content-between">
-      <div class="w-100 text-white">
-
-        <!--p class="lead mb-0">Bond - Collaborate - View</p  color: #309b90;  -->
-
-        <input type="checkbox" unchecked data-toggle="toggle"
-          data-width="120" id="unmute"
-          data-off="<i class='fa fa-music fa-1x'></i> Unmute"
-          data-on="<i class='fa fa-volume-off fa-lg'></i> Mute"
-          data-onstyle="outline-secondary" data-offstyle="outline-success"
-        >
-        <a href="#scroll-target" class="btn btn-outline-info my-2" role="batton">
-          <i class='fa fa-angle-double-down fa-lg'></i> Learn more
-        </a>
-
-        <!--button href="#scroll-target" type="button" name="button" class="btn btn-outline-info" id="more" data-width="120">Learn more</button-->
-
-      </div>
-    </div>
-
-
-
-  </div>
-</header>
-
-<div id="scroll-target"></div>
-<nav class="navbar navbar-light bg-light sticky-top">
-  <a class="navbar-brand font-bcv" href="#">
-    <img class="bg-bcv" src="bcv_logo_sq_2.png"  height="30" class="d-inline-block align-top" alt="">
-     BeCoValent
-  </a>
-  <form class="form-inline my-0">
-      <!--input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"-->
-      <button class="btn btn-outline-primary mr-2" type="submit">Login</button>
-      <button class="btn btn-outline-success" type="submit">Register</button>
-    </form>
-</nav>
-
-
-
-
-<section class="my-0">
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-md-10 mx-auto">
-        <img src="BCV_about.png" width="100%"></img>
+  <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="video">
+      <source src="BeCoValent_promo.mp4" type="video/mp4">
+    </video>
+    <div class="container-fluid h-100 p-0">
+      <div class="d-flex h-75 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3" style="font-family: 'Comfortaa', cursive; opacity: 0.7;">BeCoValent</h1>
+          <!--p class="lead mb-0">Bond - Collaborate - View</p  color: #309b90;  -->
+          <p class="lead mb-0" style="font-family: 'Comfortaa', cursive; opacity: 0.7;">Find - Bond - Team UP</p>
+        </div>
       </div>
 
-      <div class="col-md-12 mx-auto">
-        <hr />
-      </div>
-
-
-
-      <!--div class="col-md-12 mx-auto">
-        <hr />
-        <img src="BCV_chart.png" width="100%"></img>
-        <hr />
-      </div-->
-
-      <div class="col-md-6 mx-auto">
-        <img src="membership_table.png" width="100%"></img>
-      </div>
-
-      <div class="col-md-10 mx-auto">
-        <hr />
-
-        <p>FAQ</p>
-        <br />
-        <br />
-        <br />
-
-        <hr />
-
-        <p>T&C</p>
-        <br />
-        <br />
-        <br />
-
-        <hr />
-
-        <p class="mb-0">
-          <center>
-          Created by <a href="https://becovalent.github.io">BeCovalent, 2020</a>
-          </center>
-        </p>
+      <div class="d-flex flex-row justify-content-between h-25 align-items-end">
+        <div class="p-2">
+          <input type="checkbox" unchecked data-toggle="toggle"
+            data-width="120" id="unmute"
+            data-off="<i class='fa fa-music fa-1x'></i> Unmute"
+            data-on="<i class='fa fa-volume-off fa-lg'></i> Mute"
+            data-onstyle="outline-secondary" data-offstyle="outline-success"
+          >
+        </div>
+        <div class="p-2">
+          <a href="#bcv" class="btn btn-lg btn-outline-primary col-bcv" role="batton">
+            <i class='fa fa-angle-double-down fa-lg'></i>
+            Learn more
+            <i class='fa fa-angle-double-down fa-lg'></i>
+          </a>
+        </div>
+        <div class="p-2"></div>
       </div>
 
     </div>
-  </div>
-</section>
+  </header>
+
+  <div id="bcv"></div>
+
+  <nav class="navbar navbar-light bg-light sticky-top">
+    <a class="navbar-brand font-bcv" href="#">
+      <img class="bg-bcv" src="bcv_logo_sq_2.png"  height="30" class="d-inline-block align-top" alt="">
+       BeCoValent
+    </a>
+    <form class="form-inline my-0">
+        <!--input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"-->
+        <button class="btn btn-outline-primary mr-2" type="submit">Login</button>
+        <button class="btn btn-outline-success" type="submit">Register</button>
+      </form>
+  </nav>
+
+  <section class="my-0">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-10 mx-auto">
+          <img src="BCV_about.png" width="100%"></img>
+        </div>
+
+        <div class="col-md-12 mx-auto">
+          <hr />
+        </div>
 
 
-  <!-- TODO: Missing CoffeeScript 2 -->
 
-  <script type="text/javascript">//<![CDATA[
+        <!--div class="col-md-12 mx-auto">
+          <hr />
+          <img src="BCV_chart.png" width="100%"></img>
+          <hr />
+        </div-->
 
+        <div class="col-md-6 mx-auto">
+          <img src="membership_table.png" width="100%"></img>
+        </div>
 
+        <div class="col-md-10 mx-auto">
+          <hr />
 
+          <p>FAQ</p>
+          <br />
+          <br />
+          <br />
 
+          <hr />
 
-  //]]></script>
+          <p>T&C</p>
+          <br />
+          <br />
+          <br />
 
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: ""
-      }], "*")
-    }
+          <hr />
 
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
+          <p class="mb-0">
+            <center>
+            Created by <a href="https://becovalent.github.io">BeCovalent, 2020</a>
+            </center>
+          </p>
+        </div>
 
-    <script>
-      let allLines = []
-
-      window.addEventListener("message", (message) => {
-        if (message.data.console){
-          let insert = document.querySelector("#insert")
-          allLines.push(message.data.console.payload)
-          insert.innerHTML = allLines.join(";\r")
-
-          let result = eval.call(null, message.data.console.payload)
-          if (result !== undefined){
-            console.log(result)
-          }
-        }
-      })
-    </script>
-
-
+      </div>
+    </div>
+  </section>
 
 </body></html>
