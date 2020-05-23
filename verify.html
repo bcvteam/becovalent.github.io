@@ -1,0 +1,78 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>BeCoValent</title>
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa" rel="stylesheet">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" crossorigin="anonymous">
+
+
+  <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+  <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/cognito-auth.js"></script>
+
+
+  <link href="register.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+             <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Verify Email</h5>
+
+
+
+            <form class="form-signin" id="verifyForm">
+
+
+
+              <div class="form-label-group">
+                <input type="email" id="emailInputVerify" class="form-control" placeholder="Email address" required>
+                <label for="emailInputVerify">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="codeInputVerify" class="form-control" placeholder="Verification Code" required autofocus>
+                <label for="codeInputVerify">Verification Code</label>
+              </div>
+
+
+
+              <button class="btn btn-lg btn-outline-primary btn-block text-uppercase col-bcv" type="submit">Verify</button>
+            </form>
+
+
+
+
+
+
+
+                  <!--input type="email" id="emailInputVerify" placeholder="Email" required>
+                  <input type="submit" value="Verify">
+                  <input type="text" id="codeInputVerify" placeholder="Verification Code" pattern=".*" required-->
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>
