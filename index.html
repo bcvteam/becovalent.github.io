@@ -24,9 +24,19 @@
 
   <header>
     <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="video">
-      <source src="BeCoValent_promo_v2.mov" type="video/mp4">
-    </video>
+
+    <div class="d-none d-sm-block">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="video">
+        <source src="BeCoValent_promo_v2.mov" type="video/mp4">
+      </video>
+    </div>
+    <div class="d-block d-sm-none">
+      
+    </div>
+
+
+
+
 
     <div class="container-fluid h-100 p-0">
       <div class="d-flex h-50 text-center align-items-center">
@@ -60,8 +70,9 @@
           </a>
         </div>
         <div class="p-2">
-          <p class="d-none d-sm-block" style='width: 95px;'></p>
-
+          <div class="d-none d-sm-block">
+            <p style='width: 95px;'></p>
+          </div>
           <div class="d-block d-sm-none">
             <input type="checkbox" unchecked data-toggle="toggle"
               data-width="95" id="unmute"
