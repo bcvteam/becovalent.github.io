@@ -5,7 +5,7 @@ $(function() {
     $("video").prop('muted', !$(this).prop('checked') );
   });
 
-  $('#play').click(function() {
+  $('#play').on('click', function() {
 
     $("video")[0].requestFullscreen();
   });
